@@ -19,6 +19,9 @@ namespace object_practice_2016
         /** 魚の名前*/
         private string[] SAKANA_NAMES = { "グッピー", "メダカ"};
 
+        /** 人オブジェクト*/
+        private CHito[] hitoObjects;
+
         public Form1()
         {
             InitializeComponent();
