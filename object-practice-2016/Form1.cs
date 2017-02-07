@@ -29,18 +29,40 @@ namespace object_practice_2016
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            hitoObjects = new CHito[HITO_NAMES.Length];
+            for (int i = 0; i < HITO_NAMES.Length; i++)
+            {
+                hitoObjects[i] = new CHito(HITO_NAMES[i]);
+                // 名前リストを表示
+                textBox1.AppendText("" + i + ":" + HITO_NAMES[i] + "\r\n");
+            }
         }
 
         private void buttonHello_Click(object sender, EventArgs e)
         {
+            // 選択されているインデックスを取得
+            int index = int.Parse(txtIndex.Text);
+
+            // 挨拶
+            textBox1.AppendText(hitoObjects[index].hello() + "\r\n");
         }
 
         private void buttonAction_Click(object sender, EventArgs e)
         {
+            // 選択されているインデックスを取得
+            int index = int.Parse(txtIndex.Text);
+
+            // 行動
+            textBox1.AppendText(hitoObjects[index].action() + "\r\n");
         }
 
         private void buttonNumber_Click(object sender, EventArgs e)
         {
+            // 選択されているインデックスを取得
+            int index = int.Parse(txtIndex.Text);
+
+            // 人数を表示する
+            textBox1.AppendText("人は" + hitoObjects[index].getCount() + "人\r\n");
         }
     }
 }

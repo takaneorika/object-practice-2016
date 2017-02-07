@@ -14,7 +14,7 @@ namespace object_practice_2016
         private string name = "";
 
         /** コンストラクター*/
-        CHito(string nm)
+        public CHito(string nm)
         {
             name = nm;
             count++;
