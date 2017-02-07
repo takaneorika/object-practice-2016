@@ -58,11 +58,8 @@ namespace object_practice_2016
 
         private void buttonNumber_Click(object sender, EventArgs e)
         {
-            // 選択されているインデックスを取得
-            int index = int.Parse(txtIndex.Text);
-
             // 人数を表示する
-            textBox1.AppendText("人は" + hitoObjects[index].getCount() + "人\r\n");
+            textBox1.AppendText("人は" + CHito.getCount() + "人\r\n");
         }
     }
 }
