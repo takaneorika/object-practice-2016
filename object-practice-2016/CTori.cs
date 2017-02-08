@@ -25,7 +25,7 @@ namespace object_practice_2016
         }
 
         /** 行動*/
-        public string action()
+        public override string action()
         {
             return "パタパタ";
         }

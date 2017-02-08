@@ -19,7 +19,7 @@
         }
 
         /** 行動*/
-        public string action()
+        public override string action()
         {
             return "スイスイ";
         }
