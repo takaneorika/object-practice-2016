@@ -19,12 +19,8 @@ namespace object_practice_2016
         /** 魚の名前*/
         private string[] SAKANA_NAMES = { "グッピー", "メダカ"};
 
-        /** 人オブジェクト*/
-        private CHito[] hitoObjects;
-        /** 鳥オブジェクト*/
-        private CTori[] toriObjects;
-        /** 魚オブジェクト*/
-        private CSakana[] sakanaObjects;
+        /** 生き物オブジェクト*/
+        private CIkimono[] ikimonos;
 
         public Form1()
         {
@@ -33,28 +29,27 @@ namespace object_practice_2016
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            hitoObjects = new CHito[HITO_NAMES.Length];
-            for (int i = 0; i < HITO_NAMES.Length; i++)
+            ikimonos = new CIkimono[HITO_NAMES.Length+TORI_NAMES.Length+SAKANA_NAMES.Length];
+            int index = 0;
+            for (int i = 0; i < HITO_NAMES.Length; i++, index++)
             {
-                hitoObjects[i] = new CHito(HITO_NAMES[i]);
+                ikimonos[i] = new CHito(HITO_NAMES[i]);
                 // 名前リストを表示
                 textBox1.AppendText("" + i + ":" + HITO_NAMES[i] + "\r\n");
             }
 
-            toriObjects = new CTori[TORI_NAMES.Length];
-            for (int i = 0; i < TORI_NAMES.Length; i++)
+            for (int i = 0; i < TORI_NAMES.Length; i++,index++)
             {
-                toriObjects[i] = new CTori(TORI_NAMES[i]);
+                ikimonos[index] = new CTori(TORI_NAMES[i]);
                 // 名前リストを表示
-                textBox1.AppendText("" + i + ":" + TORI_NAMES[i] + "\r\n");
+                textBox1.AppendText("" + index + ":" + TORI_NAMES[i] + "\r\n");
             }
 
-            sakanaObjects = new CSakana[SAKANA_NAMES.Length];
-            for (int i = 0; i < SAKANA_NAMES.Length; i++)
+            for (int i = 0; i < SAKANA_NAMES.Length; i++,index++)
             {
-                sakanaObjects[i] = new CSakana(SAKANA_NAMES[i]);
+                ikimonos[index] = new CSakana(SAKANA_NAMES[i]);
                 // 名前リストを表示
-                textBox1.AppendText("" + i + ":" + SAKANA_NAMES[i] + "\r\n");
+                textBox1.AppendText("" + index + ":" + SAKANA_NAMES[i] + "\r\n");
             }
         }
 
@@ -64,7 +59,7 @@ namespace object_practice_2016
             int index = int.Parse(txtIndex.Text);
 
             // 挨拶
-            textBox1.AppendText(hitoObjects[index].hello() + "\r\n");
+            textBox1.AppendText(ikimonos[index].hello() + "\r\n");
         }
 
         private void buttonAction_Click(object sender, EventArgs e)
@@ -73,7 +68,7 @@ namespace object_practice_2016
             int index = int.Parse(txtIndex.Text);
 
             // 行動
-            textBox1.AppendText(hitoObjects[index].action() + "\r\n");
+            textBox1.AppendText(ikimonos[index].action() + "\r\n");
         }
 
         private void buttonNumber_Click(object sender, EventArgs e)
