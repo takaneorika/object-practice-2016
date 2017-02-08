@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace object_practice_2016
+﻿namespace object_practice_2016
 {
-    class CTori : CIkimono
+    class CSakana : CIkimono
     {
-        /** 鳥の数*/
+        /** 魚の数*/
         private static int count = 0;
 
         /** コンストラクター*/
-        public CTori(string nm)
+        public CSakana(string nm)
             : base(nm)
         {
             count++;
         }
 
-        /** 鳥の数を返す*/
+        /** 魚の数を返す*/
         public static int getCount()
         {
             return count;
@@ -27,7 +21,7 @@ namespace object_practice_2016
         /** 行動*/
         public string action()
         {
-            return "パタパタ";
+            return "スイスイ";
         }
     }
 }
