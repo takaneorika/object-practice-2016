@@ -9,5 +9,8 @@
 ## オブジェクト実装　第１段階
 - [Form1から機能を削除したもの](https://gist.github.com/tanakaedu/f843c5744c770ed466824a62018a8821)
 
+## 完成プロジェクト
+- [完成したプロジェクト](https://github.com/tanakaedu/object-practice-2016/archive/fix.zip)
+
 # ライセンス
 - MIT
