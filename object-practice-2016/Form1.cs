@@ -53,9 +53,7 @@ namespace object_practice_2016
 
         private void buttonNumber_Click(object sender, EventArgs e)
         {
-            int index = int.Parse(txtIndex.Text);
-
-            textBox1.AppendText("人は" + hitoObjects[index].getCount() + "人\r\n");
+            textBox1.AppendText("人は" + CHito.getCount() + "人\r\n");
         }
     }
 }

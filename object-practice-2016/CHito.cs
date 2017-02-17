@@ -9,7 +9,7 @@ namespace object_practice_2016
     class CHito
     {
 
-        private int count = 0;
+        private static int count = 0;
 
         private string name = "";
 
@@ -21,7 +21,7 @@ namespace object_practice_2016
         }
 
 
-        public int getCount()
+        public static int getCount()
         {
             return count;
         }
